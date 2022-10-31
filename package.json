@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "app.ts",
   "scripts": {
+    "run": "ts-node",
     "build": "tsc"
   },
   "repository": "git@github.com:n53337/Typescript-101.git",
