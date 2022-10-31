@@ -28,19 +28,50 @@
 
 // ! Interfaces & Optional properties
 
+// interface Player {
+//   username: string;
+//   score: number;
+//   bio?: string;
+// }
+
+// const displayPlayer = (player: Player) => {
+//   player.bio && console.log(player.bio);
+//   console.log(`Hey ${player.username}, your score is: ${player.score}`);
+// };
+
+// displayPlayer({
+//   username: "u53f",
+//   score: 999,
+//   bio: "am u53f, i love building stuffs",
+// });
+
+// ! Type
+
+type gender = "girl" | "boy";
+
 interface Player {
   username: string;
   score: number;
   bio?: string;
+  gender?: gender;
 }
 
 const displayPlayer = (player: Player) => {
-  player.bio && console.log(player.bio);
-  console.log(`Hey ${player.username}, your score is: ${player.score}`);
+  const sexe = player.gender === "boy" ? `his` : `her`;
+  console.log(
+    `${player.username} is a ${player.gender}, ${sexe} score is : ${player.score}`
+  );
 };
 
 displayPlayer({
   username: "u53f",
   score: 999,
   bio: "am u53f, i love building stuffs",
+  gender: "boy",
+});
+
+displayPlayer({
+  username: "linda",
+  score: 999,
+  gender: "girl",
 });
