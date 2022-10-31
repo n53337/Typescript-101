@@ -1,3 +1,9 @@
-const hello: string = "Hello, World";
+// ! Type Annotations
 
-console.log(hello);
+const msg: string = "Welcome";
+
+const greeting = (name: string, message: string): string => {
+  return `${message}, ${name} 👨‍💻`;
+};
+
+console.log(greeting("u53f", msg));

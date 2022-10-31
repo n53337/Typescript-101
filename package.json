@@ -2,6 +2,9 @@
   "name": "typescript-101",
   "version": "1.0.0",
   "main": "app.ts",
+  "scripts": {
+    "build": "tsc"
+  },
   "repository": "git@github.com:n53337/Typescript-101.git",
   "author": "u53f ",
   "license": "MIT",
