@@ -109,27 +109,36 @@
 
 // ! Classes / (private/public/protecte/readonly) / static / Interfaces-in-class
 
-interface IPlayer {
-  getInfo(): string;
+// interface IPlayer {
+//   getInfo(): string;
+// }
+
+// class Player implements IPlayer {
+//   // private userName: string;
+//   // private score: number | string;
+
+//   constructor(private userName: string, private score: number | string) {
+//     this.userName = userName;
+//     this.score = score;
+//   }
+
+//   getInfo(): string {
+//     return `player name:${this.userName}\nplayer score: ${this.score}`;
+//   }
+
+//   static readonly intro: string = `Player Class to defined Players's stats`;
+// }
+
+// const p1 = new Player("u53f", 9999);
+
+// console.log(p1.getInfo());
+// console.log(Player.intro);
+
+// ! Generics
+
+function foo<T>(x: T): T {
+  return x;
 }
 
-class Player implements IPlayer {
-  private userName: string;
-  private score: number | string;
-
-  constructor(userName: string, score: number | string) {
-    this.userName = userName;
-    this.score = score;
-  }
-
-  getInfo(): string {
-    return `player name:${this.userName}\nplayer score: ${this.score}`;
-  }
-
-  static readonly intro: string = `Player Class to defined Players's stats`;
-}
-
-const p1 = new Player("u53f", 9999);
-
-console.log(p1.getInfo());
-console.log(Player.intro);
+const xx = foo<string>("u53f");
+console.log(xx);
