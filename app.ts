@@ -96,13 +96,40 @@
 
 // ! Typescript with DOM
 
-const element: HTMLInputElement = document.querySelector(
-  ".wrapper"
-) as HTMLInputElement;
+// const element: HTMLInputElement = document.querySelector(
+//   ".wrapper"
+// ) as HTMLInputElement;
 
-console.log(element.value);
+// console.log(element.value);
 
-element.addEventListener("submit", (el) => {
-  const target = el.target as HTMLInputElement;
-  console.log(target.value);
-});
+// element.addEventListener("submit", (el) => {
+//   const target = el.target as HTMLInputElement;
+//   console.log(target.value);
+// });
+
+// ! Classes / (private/public/protecte/readonly) / static / Interfaces-in-class
+
+interface IPlayer {
+  getInfo(): string;
+}
+
+class Player implements IPlayer {
+  private userName: string;
+  private score: number | string;
+
+  constructor(userName: string, score: number | string) {
+    this.userName = userName;
+    this.score = score;
+  }
+
+  getInfo(): string {
+    return `player name:${this.userName}\nplayer score: ${this.score}`;
+  }
+
+  static readonly intro: string = `Player Class to defined Players's stats`;
+}
+
+const p1 = new Player("u53f", 9999);
+
+console.log(p1.getInfo());
+console.log(Player.intro);
