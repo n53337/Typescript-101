@@ -47,31 +47,49 @@
 
 // ! Type
 
-type gender = "girl" | "boy";
+// type gender = "girl" | "boy";
 
-interface Player {
-  username: string;
-  score: number;
-  bio?: string;
-  gender?: gender;
-}
+// interface Player {
+//   username: string;
+//   score: number;
+//   bio?: string;
+//   gender?: gender;
+// }
 
-const displayPlayer = (player: Player) => {
-  const sexe = player.gender === "boy" ? `his` : `her`;
-  console.log(
-    `${player.username} is a ${player.gender}, ${sexe} score is : ${player.score}`
-  );
+// const displayPlayer = (player: Player) => {
+//   const sexe = player.gender === "boy" ? `his` : `her`;
+//   console.log(player.bio);
+//   console.log(
+//     `${player.username} is a ${player.gender}, ${sexe} score is : ${player.score}`
+//   );
+// };
+
+// displayPlayer({
+//   username: "u53f",
+//   score: 999,
+//   bio: "am u53f, i love building stuffs",
+//   gender: "boy",
+// });
+
+// displayPlayer({
+//   username: "linda",
+//   score: 999,
+//   gender: "girl",
+//   bio: "hello",
+// });
+
+// ! Void Unknown Types
+
+// * `void` type on a function means that it'll return nothing
+const sayHi = (): void => {
+  console.log("Hello");
+  // return 1;
 };
 
-displayPlayer({
-  username: "u53f",
-  score: 999,
-  bio: "am u53f, i love building stuffs",
-  gender: "boy",
-});
+let unknown: unknown = "u53f";
 
-displayPlayer({
-  username: "linda",
-  score: 999,
-  gender: "girl",
-});
+unknown = 21;
+unknown = true;
+
+// * reassign type
+let x: number = unknown as number;
