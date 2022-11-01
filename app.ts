@@ -136,9 +136,18 @@
 
 // ! Generics
 
-function foo<T>(x: T): T {
-  return x;
-}
+// function foo<T>(x: T): T {
+//   return x;
+// }
 
-const xx = foo<string>("u53f");
-console.log(xx);
+// const xx = foo<string>("u53f");
+// console.log(xx);
+
+// ! enums
+
+const enum progress {
+  NotStarted = "not started",
+  InProgress = "in progress",
+  Completed = "completed",
+}
+console.log(progress.Completed);
