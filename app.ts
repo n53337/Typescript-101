@@ -81,15 +81,28 @@
 // ! Void Unknown Types
 
 // * `void` type on a function means that it'll return nothing
-const sayHi = (): void => {
-  console.log("Hello");
-  // return 1;
-};
+// const sayHi = (): void => {
+//   console.log("Hello");
+//   // return 1;
+// };
 
-let unknown: unknown = "u53f";
+// let unknown: unknown = "u53f";
 
-unknown = 21;
-unknown = true;
+// unknown = 21;
+// unknown = true;
 
-// * reassign type
-let x: number = unknown as number;
+// // * reassign type
+// let x: number = unknown as number;
+
+// ! Typescript with DOM
+
+const element: HTMLInputElement = document.querySelector(
+  ".wrapper"
+) as HTMLInputElement;
+
+console.log(element.value);
+
+element.addEventListener("submit", (el) => {
+  const target = el.target as HTMLInputElement;
+  console.log(target.value);
+});
