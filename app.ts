@@ -15,6 +15,7 @@
 // const arr = [1, 3];
 // arr.push("sdf");
 // arr.push(23);
+// arr.push(23);
 
 // const arr1: any = [1, true, "x"];
 
